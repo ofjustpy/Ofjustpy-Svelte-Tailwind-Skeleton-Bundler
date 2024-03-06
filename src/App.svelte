@@ -2,6 +2,15 @@
    import { LightSwitch } from '@skeletonlabs/skeleton';
    import Logo from './assets/svelte.png';
    import Counter from './lib/Counter.svelte';
+   import { justpyComponents } from "./store.js";
+   import Htmlcomponents from './Htmlcomponents.svelte';
+   import SVGComponent from './SVGComponent.svelte';
+   let components =  {'html_component': Htmlcomponents,
+		    'svg_component': SVGComponent
+                    
+                    };
+   $: console.log('Store value:', $justpyComponents);
+		  
 </script>
 
 <div class="container mx-auto flex h-full flex-col items-center justify-center">
@@ -28,3 +37,13 @@
       </ul>
    </div>
 </div>
+
+{#each $justpyComponents as jpcomp}
+  {#if jpcomp.vue_type === "html_component"}
+    <svelte:component this={Htmlcomponents} jp_props={jpcomp}/>
+  {:else}
+    <svelte:component this={components[jpcomp.vue_type]} jp_props={jpcomp} />
+  {/if}
+  
+  
+{/each}
