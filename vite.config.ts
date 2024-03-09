@@ -8,7 +8,7 @@ export default defineConfig({
    build: {
     lib: {
       entry: 'src/main.ts', // Specify the entry file for the bundle
-      name: 'MyApp', // Specify the global variable name for the bundle
+      name: 'jpComponentBuilder', // Specify the global variable name for the bundle
       formats:['iife'],
       fileName: 'bundle', // Specify the name of the bundle file
     },
