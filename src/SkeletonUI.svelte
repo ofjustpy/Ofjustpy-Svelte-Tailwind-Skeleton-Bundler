@@ -1,17 +1,23 @@
 
 <script lang="ts">
-	import { Avatar } from '@skeletonlabs/skeleton';	
-	let visible: boolean = true;   					
+let visible: boolean = true;
 </script>
 
-<Avatar src="https://i.pravatar.cc/" />
-
-<span class="badge variant-filled">Badge</span>
-
-    <button type="button" class="btn-icon variant-filled"><i class="fa-solid fa-skull" />
-</button>
-<button type="button" class="btn variant-filled">Button</button>
-<button type="button" class="btn variant-filled">
-	<span><i class="fa-solid fa-car" /></span>
-	<span>Button</span>
-</button>
+{#if visible}
+    <aside class="alert variant-ghost">
+        <!-- Icon -->
+	        <icon class="fa-solid fa-triangle-exclamation"></icon>
+        <icon class="fa-solid fa-triangle-exclamation"></icon>		
+        <!-- Message -->
+        <div class="alert-message">
+            <h3 class="h3">A title</h3>
+            <p>Got-Message</p>
+        </div>
+        <!-- Actions -->
+        <div class="alert-actions">
+	<button class="btn variant-filled">Action</button>
+	<button class="btn-icon variant-filled"><i class="fa-solid fa-xmark" /></button>
+	</div>
+    </aside>
+{/if}
+            
