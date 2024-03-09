@@ -8,3 +8,4 @@ const alpha = new jpComponentBuilder.App({target: document.getElementById("compo
 console.log(alpha);
 			      
 
+const beta = new jpComponentBuilder.SkeletonUI({target: document.getElementById("app")});

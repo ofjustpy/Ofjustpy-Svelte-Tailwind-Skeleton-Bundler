@@ -1,7 +1,7 @@
 import './app.postcss';
 import App from './App.svelte';
 import { justpyComponents, setJustpyComponents } from './store_jpcomponents';
-
+import SkeletonUI from './SkeletonUI.svelte';
 
 
 import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
@@ -14,4 +14,4 @@ storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 //    target: document.getElementById('app') as Element
 // });
 
-export {App, justpyComponents, setJustpyComponents};
+export {App, SkeletonUI, justpyComponents, setJustpyComponents};

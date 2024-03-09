@@ -8,6 +8,6 @@ import tailwindConfig from './tailwind.config.ts';
 //};
 
 export default {
-  plugins: [tailwind(), autoprefixer]
+  plugins: [tailwind(tailwindConfig), autoprefixer]
 };
 
