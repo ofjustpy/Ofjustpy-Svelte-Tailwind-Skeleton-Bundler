@@ -2,7 +2,7 @@
    import { LightSwitch } from '@skeletonlabs/skeleton';
    import Logo from './assets/svelte.png';
    import Counter from './lib/Counter.svelte';
-   import { justpyComponents } from "./store.js";
+   import { justpyComponents, setJustpyComponents } from './store_jpcomponents';
    import Htmlcomponents from './Htmlcomponents.svelte';
    import SVGComponent from './SVGComponent.svelte';
    let components =  {'html_component': Htmlcomponents,

@@ -1,6 +1,8 @@
 import './app.postcss';
 import App from './App.svelte';
-import { justpyComponents, setJustpyComponents } from "./store.js";
+import { justpyComponents, setJustpyComponents } from './store_jpcomponents';
+
+
 
 import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 import { storePopup, setInitialClassState } from '@skeletonlabs/skeleton';
