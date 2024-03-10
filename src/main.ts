@@ -10,8 +10,8 @@ import { storePopup, setInitialClassState } from '@skeletonlabs/skeleton';
 setInitialClassState()
 storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
-// const app = new App({
-//    target: document.getElementById('app') as Element
-// });
+// const app = new SkeletonUI({
+//     target: document.getElementById('app') as Element
+//  });
 
 export {App, SkeletonUI, justpyComponents, setJustpyComponents};

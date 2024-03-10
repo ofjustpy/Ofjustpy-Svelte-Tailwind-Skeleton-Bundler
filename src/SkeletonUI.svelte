@@ -1,13 +1,22 @@
 
 <script lang="ts">
 let visible: boolean = true;
+import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
+import { faHome, faUser } from '@fortawesome/free-solid-svg-icons';
+import { Avatar } from '@skeletonlabs/skeleton';
+ 
 </script>
+
+<Avatar src="https://i.pravatar.cc/" />
+<button type="button" class="btn-icon variant-filled"><i class="fa-solid fa-skull" />
+</button>
 
 {#if visible}
     <aside class="alert variant-ghost">
         <!-- Icon -->
-	        <icon class="fa-solid fa-triangle-exclamation"></icon>
-        <icon class="fa-solid fa-triangle-exclamation"></icon>		
+	<FontAwesomeIcon icon={faHome} />
+	<FontAwesomeIcon icon={faUser} />
+
         <!-- Message -->
         <div class="alert-message">
             <h3 class="h3">A title</h3>
@@ -16,7 +25,8 @@ let visible: boolean = true;
         <!-- Actions -->
         <div class="alert-actions">
 	<button class="btn variant-filled">Action</button>
-	<button class="btn-icon variant-filled"><i class="fa-solid fa-xmark" /></button>
+	<button class="btn-icon variant-filled">	<FontAwesomeIcon icon={faUser} />
+	</button>
 	</div>
     </aside>
 {/if}
