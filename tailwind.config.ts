@@ -9,6 +9,8 @@ export default {
    darkMode: 'class',
    content: ['./src/**/*.{html,js,svelte,ts}',
    join(import.meta.resolve('@skeletonlabs/skeleton'),
+   '../**/*.{html,js,svelte,ts}'),
+     join(import.meta.resolve('@skeletonlabs/tw-plugin'),
    '../**/*.{html,js,svelte,ts}')
     //join(require.resolve('@skeletonlabs/skeleton'),
     // '../**/*.{html,js,svelte,ts}'
@@ -23,7 +25,7 @@ export default {
       typography,
       skeleton({
          themes: {
-            custom: [theme]
+            preset: ["skeleton", "wintry", "modern"]
          }
       })
    ]
