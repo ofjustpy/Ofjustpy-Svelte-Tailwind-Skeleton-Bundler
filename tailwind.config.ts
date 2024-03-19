@@ -25,7 +25,7 @@ export default {
       typography,
       skeleton({
          themes: {
-            preset: ["skeleton", "wintry", "modern"]
+            preset: ["skeleton", "wintry", "modern", "rocket", "seafoam", "vintage", "sahara", "crimson"]
          }
       })
    ]

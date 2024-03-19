@@ -5,8 +5,11 @@
    import { justpyComponents, setJustpyComponents } from './store_jpcomponents';
    import Htmlcomponents from './Htmlcomponents.svelte';
    import SVGComponent from './SVGComponent.svelte';
+   import FontAwesomeComponent from './FontAwesomeComponent.svelte';
+   
    let components =  {'html_component': Htmlcomponents,
-		    'svg_component': SVGComponent
+		    'svg_component': SVGComponent,
+		    'fontawesome_component': FontAwesomeComponent
                     
                     };
    $: console.log('Store value:', $justpyComponents);

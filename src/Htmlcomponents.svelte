@@ -4,6 +4,7 @@
   props['jp_props'] = jp_props;
   
   import SVGComponent from './SVGComponent.svelte';
+  import FontAwesomeComponent from './FontAwesomeComponent.svelte';
   const selfClosingTags = ['hr', 'input', 'area', 'base', 'br', 'col', 'embed', 'img', 'link', 'meta', 'param', 'source', 'track', 'wbr'];
 
   const components = {
@@ -54,4 +55,4 @@
     on:mouseleave={eventHandlers.mouseleave}
     on:mouseout={eventHandlers.mouseout}
     on:dblclick={eventHandlers.dblclick}
->{#if jp_props.text}{jp_props.text}{/if}{#each jp_props.object_props as cobj_props}{#if cobj_props.show}<svelte:self jp_props={cobj_props}/>{/if}{/each}{#if jp_props.inner_html}{@html jp_props.inner_html}{/if}</svelte:element>{:else if jp_props.vue_type === "svg_component"}<SVGComponent jp_props={jp_props}/>{:else}<svelte:component this={components[jp_props.vue_type]} {...descriptionObject} jp_props={jp_props}/>{/if}
+>{#if jp_props.text}{jp_props.text}{/if}{#each jp_props.object_props as cobj_props}{#if cobj_props.show}<svelte:self jp_props={cobj_props}/>{/if}{/each}{#if jp_props.inner_html}{@html jp_props.inner_html}{/if}</svelte:element>{:else if jp_props.vue_type === "svg_component"}<SVGComponent jp_props={jp_props}/>{:else if jp_props.vue_type === "fontawesome_component"}<FontAwesomeComponent jp_props={jp_props}/>{:else}<svelte:component this={components[jp_props.vue_type]} {...descriptionObject} jp_props={jp_props}/>{/if}
