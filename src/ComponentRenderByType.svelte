@@ -11,7 +11,9 @@
                     
                     };
    export let jp_props;
-		  
+   console.log("in ComponentRenderByType ");
+   console.log(jp_props.vue_type);
+   
 </script>
 
 <svelte:component this={components[jp_props.vue_type]} jp_props={jp_props} />

@@ -16,7 +16,8 @@ export default defineConfig({
    css: { postcss
 
 },
-   build: {
+   build: { 
+	   sourcemap: true,
     lib: {
       entry: 'src/main.ts', // Specify the entry file for the bundle
       name: 'jpComponentBuilder', // Specify the global variable name for the bundle

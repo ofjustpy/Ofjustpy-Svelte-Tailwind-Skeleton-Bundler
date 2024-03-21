@@ -8,6 +8,7 @@ import { theme } from './src/theme';
 export default {
    darkMode: 'class',
    content: ['./src/**/*.{html,js,svelte,ts}',
+   './node_modules/@skeletonlabs/skeleton/dist/components/SlideToggle/SlideToggle.svelte',
    join(import.meta.resolve('@skeletonlabs/skeleton'),
    '../**/*.{html,js,svelte,ts}'),
      join(import.meta.resolve('@skeletonlabs/tw-plugin'),
