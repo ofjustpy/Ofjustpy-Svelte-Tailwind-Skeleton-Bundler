@@ -5,6 +5,5 @@ import SkeletonSafelist from './SkeletonSafelist.svelte';
 
 
 import SkeletonUtilities from './SkeletonUtilities.svelte';
-import SkeletonAppBar from './SkeletonAppBar.svelte';
 
-export {App,  SkeletonUtilities,   SkeletonSafelist,  justpyComponents, setJustpyComponents, SkeletonAppBar};
+export {App,  SkeletonUtilities,   SkeletonSafelist,  justpyComponents, setJustpyComponents};

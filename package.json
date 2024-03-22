@@ -44,6 +44,8 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/svelte-fontawesome": "^0.2.2"
+    "@fortawesome/svelte-fontawesome": "^0.2.2",
+    "@melt-ui/pp": "^0.3.0",
+    "@melt-ui/svelte": "^0.76.0"
   }
 }

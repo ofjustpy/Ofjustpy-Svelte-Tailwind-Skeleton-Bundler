@@ -4,8 +4,10 @@
     import ComponentRenderByType from './ComponentRenderByType.svelte';
   import { TabGroup, Tab, CodeBlock, TabAnchor } from '@skeletonlabs/skeleton';
   import { SlideToggle } from '@skeletonlabs/skeleton';
+  import { ListBox, ListBoxItem } from '@skeletonlabs/skeleton';
 
   let tabsBasic = 0;
+  let valueSingle = 'books';
   const components = {
     accordion: Accordion,
     accordionitem: AccordionItem,
@@ -137,7 +139,30 @@ if (jp_props.html_tag === "tab") {
   </Tab>
 {:else if jp_props.html_tag === 'slidetoggle'}
   <SlideToggle  {...descriptionObject} />
+
+{:else if jp_props.html_tag === 'listbox'}
+  <ListBox  {...descriptionObject} >
+  {#each jp_props.object_props as cobj_props}
+	{#if cobj_props.show}
+	  <svelte:component this={ComponentRenderByType} jp_props={cobj_props}/>
+	{/if}
+      {/each}
+      
+    </ListBox>
   
+{:else if jp_props.html_tag === 'listboxitem'}
+  <ListBoxItem  bind:group={valueSingle} name="median" value={jp_props.value} {...descriptionObject} >
+    <svelte:fragment slot="lead">
+      {#each jp_props.slot_lead_json as cobj_props}
+	{#if cobj_props.show}
+	  <svelte:component this={ComponentRenderByType} jp_props={cobj_props}/>
+	{/if}
+      {/each}
+    </svelte:fragment>
+        {#if jp_props.text}{jp_props.text}{/if}
+  {#if jp_props.inner_html}{@html jp_props.inner_html}{/if}
+
+    </ListBoxItem>
 {:else}
 Not yet implemented
 {/if}

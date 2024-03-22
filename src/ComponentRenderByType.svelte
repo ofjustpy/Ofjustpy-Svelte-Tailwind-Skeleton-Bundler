@@ -3,11 +3,13 @@
    import SVGComponent from './SVGComponent.svelte';
    import FontAwesomeComponent from './FontAwesomeComponent.svelte';
    import SkeletonComponent from './SkeletonComponent.svelte';
-   
+  import MeltUIComponent from './MeltUIComponent.svelte';
+  
    let components =  {'html_component': Htmlcomponents,
 		    'svg_component': SVGComponent,
 		    'fontawesome_component': FontAwesomeComponent,
-		    'skeleton_component': SkeletonComponent
+		      'skeleton_component': SkeletonComponent,
+		      'meltui_component': MeltUIComponent
                     
                     };
    export let jp_props;
