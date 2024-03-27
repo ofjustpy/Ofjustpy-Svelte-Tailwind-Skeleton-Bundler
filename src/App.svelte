@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	    import ComponentRenderByType from './ComponentRenderByType.svelte';
    import { justpyComponents, setJustpyComponents } from './store_jpcomponents';
    $: console.log('Store value:', $justpyComponents);

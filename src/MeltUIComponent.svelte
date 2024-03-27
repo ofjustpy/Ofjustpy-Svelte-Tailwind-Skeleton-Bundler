@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Slider from './meltui/Slider.svelte';
   import Avatar from './meltui/Avatar.svelte';
   import Calendar from './meltui/Calendar.svelte';
